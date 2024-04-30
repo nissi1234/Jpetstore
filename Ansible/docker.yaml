@@ -10,10 +10,10 @@
     - name: Build Docker Image
       command: docker build -t petstore .
       args:
-        chdir: /var/lib/jenkins/workspace/petshop-job
+        chdir: /var/lib/jenkins/workspace/petstore
 
     - name: tag image
-      command: docker tag petstore gouserabbani/petstore:latest 
+      command: docker tag petstore vivekchintu/petstore:latest 
 
     - name: Log in to Docker Hub
       community.docker.docker_login:
